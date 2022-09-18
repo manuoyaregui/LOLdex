@@ -7,7 +7,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>LOLDex</title>
+
 </head>
 <body>
 <header>
@@ -24,15 +25,6 @@
                         <a class="nav-link active" href="index.php">Inicio
                             <span class="visually-hidden">(current)</span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Campeones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Buscar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
                     </li>
                 </ul>
 

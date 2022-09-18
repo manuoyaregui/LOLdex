@@ -1,0 +1,30 @@
+.form-en-busqueda {
+    margin-top: 50px;
+}
+
+.contenedor-busqueda > .row > .col-md-auto:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contenedor-busqueda > .row > .col-md-auto{
+    margin-bottom: 50px;
+}
+
+.imagen-busqueda {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+.nombre-campeon{
+    position: relative;
+    margin-top: -90px;
+    margin-left: 20px;
+}
+
+.nombre-campeon > h1{
+    color: FFF;
+}

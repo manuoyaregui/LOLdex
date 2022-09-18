@@ -4,7 +4,7 @@
 <main class="container">
     <h1 class="text-center text-primary mt-3">LOLDEX</h1>
 
-    <form class="d-flex">
+    <form action="buscar.php" class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Buscá tu campeón...">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>

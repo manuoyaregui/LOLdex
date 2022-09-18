@@ -4,6 +4,7 @@
     <?php
         include_once '../css/bootstrap.min.css';
         include_once '../css/styles.css';
+        include_once '../css/buscar.css';
     ?>
 
 </style>
