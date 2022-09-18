@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Inicio
+                        <a class="nav-link active" href="index-log.php">Inicio
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
@@ -38,13 +38,8 @@
 
                 <form action="" class="mt-2">
                     <div class="form-group d-flex " >
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
-                        </div>
-                        <div class="form-group mx-2">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
-                        </div>
-                        <a href="index-log.php" class="btn btn-primary " >Log in</a>
+                        <h4 class="mx-3">usuario ADMIN</h4>
+                        <a href="index.php" class="btn btn-primary " >Log out</a>
                     </div>
                 </form>
             </div>
