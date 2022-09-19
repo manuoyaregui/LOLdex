@@ -41,6 +41,27 @@
             <td>Luchador</td>
             <td>003</td>
         </tr>
+        <tr>
+            <td><img src="../images/ZedSquare.webp" alt="foto-zed"></td>
+            <td>Zed</td>
+            <td>Mid</td>
+            <td>Asesino</td>
+            <td>004</td>
+        </tr>
+        <tr>
+            <td><img src="../images/BraumSquare.webp" alt="foto-braum"></td>
+            <td>Braum</td>
+            <td>Supp</td>
+            <td>Tanque</td>
+            <td>005</td>
+        </tr>
+        <tr>
+            <td><img src="../images/ZiggsSquare.webp" alt="foto-ziggs"></td>
+            <td>Ziggs</td>
+            <td>Mid</td>
+            <td>Mago</td>
+            <td>006</td>
+        </tr>
     </table>
 
 </main>
