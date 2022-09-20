@@ -4,8 +4,8 @@
 <main class="container">
     <h1 class="text-center text-primary mt-3">LOLDEX</h1>
 
-    <form action="buscar.php" class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Buscá tu campeón...">
+    <form action="buscar.php" class="d-flex" method="POST">
+        <input class="form-control me-sm-2" type="text" name="busqueda" placeholder="Buscá tu campeón...">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
 
@@ -38,7 +38,7 @@
             <td><img src="../images/OlafSquare.webp" alt="foto-caitlyn"></td>
             <td>Olaf</td>
             <td>Top</td>
-            <td><img src="../Images/iconosDeRoles/icono-luchador.webp"></td>
+            <td><img class="iconoRol"src="../Images/iconosDeRoles/icono-luchador.webp"></td>
             <td>003</td>
         </tr>
         <tr>
@@ -63,7 +63,6 @@
             <td>006</td>
         </tr>
     </table>
-
 </main>
 
 </body>
