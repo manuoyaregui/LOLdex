@@ -1,0 +1,13 @@
+main{
+    width: 100%;
+    margin: auto;
+}
+
+
+.rolImg{
+    height: 3em;
+}
+
+.btnVerOtrosCampeones{
+    right: 1em;
+}
