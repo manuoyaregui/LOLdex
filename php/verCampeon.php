@@ -1,7 +1,5 @@
-<?php
-    include_once "header.php";
+<?php include_once "header.php"; ?>
 
-?>
 <style>
     <?php include_once "../css/verCampeonStyles.css"; ?>
 </style>
