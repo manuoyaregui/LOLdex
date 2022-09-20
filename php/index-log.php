@@ -9,8 +9,9 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
 
-
-    <button type="button" class="btn btn-success mb-3 float-end">Añadir Campeón</button>
+    <a href="agregarCampeon.php">
+    <button  type="button" class="btn btn-success mb-3 float-end">Añadir Campeón</button>
+    </a>
 
     <table class="table table-hover">
         <thead>

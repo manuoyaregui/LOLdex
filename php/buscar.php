@@ -14,22 +14,44 @@
     <article class="contenedor-busqueda">
     <div class="row">
         <div class="col-md-auto">
-            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Ahri.jpg" alt="Ahri">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
+            <div class="nombre-campeon">
+                <h2>Ahri</h2>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
             <div class="nombre-campeon">
                 <h1>Ahri</h1>
             </div>
         </div>
-        <div class="col-md-auto"> <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Caitlyn.jpg" alt="Olaf">
+        <div class="col-md-auto">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
             <div class="nombre-campeon">
-                <h1>Caitlyn</h1>
+                <h1>Ahri</h1>
             </div>
         </div>
         <div class="col-md-auto">
-            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Olaf.jpg" alt="Olaf">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
             <div class="nombre-campeon">
-                <h1>Olaf</h1>
+                <h1>Ahri</h1>
+            </div>
+        </div><div class="col-md-auto">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
+            <div class="nombre-campeon">
+                <h1>Ahri</h1>
+            </div>
+        </div><div class="col-md-auto">
+            <img class="imagen-busqueda" src="../Images/IlustracionCompleta/Champion_icon_Ahri.png" alt="Ahri">
+            <div class="nombre-campeon">
+                <h1>Ahri</h1>
             </div>
         </div>
+
+
+
+
+
 
     </div>
 
