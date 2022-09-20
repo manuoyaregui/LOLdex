@@ -38,7 +38,7 @@
             <td><img src="../images/OlafSquare.webp" alt="foto-caitlyn"></td>
             <td>Olaf</td>
             <td>Top</td>
-            <td><img src="../Images/iconosDeRoles/icono-luchador.webp"></td>
+            <td><img src="../Images/iconosDeRoles/Luchador.webp"></td>
             <td>003</td>
         </tr>
         <tr>

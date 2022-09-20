@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="85934741-fea9-4fa9-b570-804d03dcd4b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-asesino.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Asesino.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-luchador.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Luchador.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-mago.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Mago.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-support.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Soporte.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-tanque.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Tanque.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/iconosDeRoles/icono-tirador.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Images/iconosDeRoles/Tirador.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/includes.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/includes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/verCampeon.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/verCampeon.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/xampp/htdocs/LOLdex/php",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
