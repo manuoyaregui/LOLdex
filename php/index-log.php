@@ -1,5 +1,10 @@
 <?php include_once "header-log.php" ?>
 
+<script>
+    function alertaEliminarCampeon(){
+    alert("¿Eliminar campeón?");
+    }
+</script>
 
 <main class="container">
     <h1 class="text-center text-primary mt-3">LOLDEX</h1>
@@ -9,10 +14,8 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
 
-    <a href="agregarCampeon.php">
-    <button  type="button" class="btn btn-success mb-3 float-end">Añadir Campeón</button>
-    </a>
 
+    <a href="agregar-champ.php" class="btn btn-success mb-3 float-end">Añadir Campeón</a>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -32,9 +35,9 @@
             <td class="text-center">Mago</td>
             <td class="text-center">001</td>
             <td class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-secondary">Modificar</button>
+                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
 
-                <button type="button" class="btn btn-warning">Eliminar</button>
+                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
             </td>
         </tr>
         <tr>
@@ -44,9 +47,9 @@
             <td class="text-center">Tirador</td>
             <td class="text-center">002</td>
             <td class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-secondary">Modificar</button>
+                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
 
-                <button type="button" class="btn btn-warning">Eliminar</button>
+                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
             </td>
         </tr>
         <tr>
@@ -56,9 +59,9 @@
             <td class="text-center">Luchador</td>
             <td class="text-center">003</td>
             <td class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-secondary">Modificar</button>
+                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
 
-                <button type="button" class="btn btn-warning">Eliminar</button>
+                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
             </td>
         </tr>
     </table>
