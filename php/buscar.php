@@ -16,18 +16,27 @@
     <article class="contenedor-busqueda">
     <div class="row">
         <?php
-
-            $busqueda = $_POST["busqueda"];
             $database = new Database();
-            $consulta = "select * from campeon where tipo = '". $busqueda."'";
-            $resultadosBusqueda =$database->query($consulta);
+            $busqueda = "";
+            $resultadosBusqueda = "";
+            if(isset($_POST["busqueda"])) {
+                $busqueda = $_POST["busqueda"];
+                $consulta = "select * from campeon where nombre like '%" .$busqueda."%' or tipo like '".$busqueda."' or numero like '".$busqueda ."'";
+                $resultadosBusqueda =$database->query($consulta);
+            }
+
+            if($resultadosBusqueda == null || $busqueda == null){
+                $consulta = "select * from campeon where 1";
+                $resultadosBusqueda =$database->query($consulta);
+            }
             foreach($resultadosBusqueda as  $resultado){
-                echo "<div class='col-md-auto'>
+                echo "<div class='col-md-auto'><a href='verCampeon.php?nombre=".$resultado['nombre']."'>
                         <img class='imagen-busqueda' src='../Images/ilustracionesSquare/Champion_icon_". $resultado['nombre'] .".png' alt=".$resultado['nombre'].">
                         <div class='nombre-campeon'>
-                          <h2>".$resultado['nombre']."</h2>
+                          <h2>".$resultado['nombre']."</h2></a>
                         </div>
             </div>";
+
             }
         ?>
     </article>
