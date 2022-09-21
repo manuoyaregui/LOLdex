@@ -4,10 +4,9 @@
     <list default="true" id="85934741-fea9-4fa9-b570-804d03dcd4b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/buscar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/buscar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/buscar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/verCampeon.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/verCampeon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

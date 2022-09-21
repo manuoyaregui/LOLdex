@@ -19,9 +19,14 @@
             $database = new Database();
             $busqueda = "";
             $resultadosBusqueda = "";
-            if(isset($_POST["busqueda"])) {
+           if(isset($_POST["busqueda"])) {
                 $busqueda = $_POST["busqueda"];
-                $consulta = "select * from campeon where nombre like '%" .$busqueda."%' or tipo like '".$busqueda."' or numero like '".$busqueda ."'";
+                $consulta = "select * from campeon where nombre like '%" .$busqueda."%' or tipo like '".$busqueda."' or numero like '".$busqueda ."' or rol like '%". $busqueda."%'";
+                $resultadosBusqueda =$database->query($consulta);
+            }
+            if(isset($_GET["busquedaGet"])){
+                $busqueda = $_GET["busquedaGet"];
+                $consulta = "select * from campeon where tipo like '".$busqueda."'or rol like '%". $busqueda."%'";
                 $resultadosBusqueda =$database->query($consulta);
             }
 
@@ -31,7 +36,7 @@
             }
             foreach($resultadosBusqueda as  $resultado){
                 echo "<div class='col-md-auto'><a href='verCampeon.php?nombre=".$resultado['nombre']."'>
-                        <img class='imagen-busqueda' src='../Images/ilustracionesSquare/Champion_icon_". $resultado['nombre'] .".png' alt=".$resultado['nombre'].">
+                        <img class='imagen-busqueda' src='../Images/ilustracionesSquare/Champion_icon_". $resultado['nombre'] .".png' alt=foto-de-".$resultado['nombre'].">
                         <div class='nombre-campeon'>
                           <h2>".$resultado['nombre']."</h2></a>
                         </div>

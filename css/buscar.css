@@ -17,10 +17,10 @@
     height: 200px;
 }
 
-
-.nombre-campeon{
-
+.nombre-campeon > a{
+    text-decoration: none;
 }
+
 
 .nombre-campeon > a > h2{
     color: FFF;
