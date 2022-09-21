@@ -21,7 +21,7 @@
 
 
 <main class="container">
-    <a href="#" class="btnVerOtrosCampeones mt-3 btn btn-primary opacity-75 position-absolute">Ver otros campeones</a>
+    <a href="buscar.php" class="btnVerOtrosCampeones mt-3 btn btn-primary opacity-75 position-absolute">Ver otros campeones</a>
     <div class="row d-flex justify-content-center mt-3 col-lg-12">
         <img class="champImg col-lg-7" src="../Images/IlustracionCompleta/<?php echo $campeonObj['nombre'] ?>.jpg">
         <div class="container col-lg-5">

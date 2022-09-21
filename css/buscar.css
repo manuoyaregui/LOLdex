@@ -22,7 +22,7 @@
 
 }
 
-.nombre-campeon > h2{
+.nombre-campeon > a > h2{
     color: FFF;
     text-align: center;
 }

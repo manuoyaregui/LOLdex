@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85934741-fea9-4fa9-b570-804d03dcd4b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Ahri.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Caitlyn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Olaf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/IlustracionCompleta/AhriSquare.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/IlustracionCompleta/Champion_icon_Ahri.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Vayne.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/buscar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/buscar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/buscar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/verCampeon.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/verCampeon.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +28,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/PograWeb2",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/PograWeb2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\LOLdex\php" />
