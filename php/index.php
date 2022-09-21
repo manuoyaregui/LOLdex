@@ -19,49 +19,24 @@
             <th scope="col">Número</th>
         </tr>
         </thead>
+
         <tbody>
-        <tr>
-            <td><img src="../images/AhriSquare.webp" alt="foto-ahri"></td>
-            <td>Ahri</td>
-            <td>Mid</td>
-            <td>Mago</td>
-            <td>001</td>
-        </tr>
-        <tr>
-            <td><img src="../images/CaitlynSquare.webp" alt="foto-caitlyn"></td>
-            <td>Caitlyn</td>
-            <td>Adc</td>
-            <td>Tirador</td>
-            <td>002</td>
-        </tr>
-        <tr>
-            <td><img src="../images/OlafSquare.webp" alt="foto-caitlyn"></td>
-            <td>Olaf</td>
-            <td>Top</td>
-            <td><img src="../Images/iconosDeRoles/Luchador.webp"></td>
-            <td>003</td>
-        </tr>
-        <tr>
-            <td><img src="../images/ZedSquare.webp" alt="foto-zed"></td>
-            <td>Zed</td>
-            <td>Mid</td>
-            <td>Asesino</td>
-            <td>004</td>
-        </tr>
-        <tr>
-            <td><img src="../images/BraumSquare.webp" alt="foto-braum"></td>
-            <td>Braum</td>
-            <td>Supp</td>
-            <td>Tanque</td>
-            <td>005</td>
-        </tr>
-        <tr>
-            <td><img src="../images/ZiggsSquare.webp" alt="foto-ziggs"></td>
-            <td>Ziggs</td>
-            <td>Mid</td>
-            <td>Mago</td>
-            <td>006</td>
-        </tr>
+
+        <?php
+        $database = new Database();
+        $consulta = "select * from campeon where 1";
+        $resultadosBusqueda =$database->query($consulta);
+        foreach ($resultadosBusqueda as  $resultado){
+            echo"<tr>
+                    <td> <a href='verCampeon.php?nombre=".$resultado['nombre']."'><img class='iconosIndex' src='../Images/ilustracionesSquare/Champion_icon_".$resultado['nombre'].".png' alt='foto-de".$resultado['nombre']."'></a></td>
+                    <td> <a class='hipervinculoCampeon' href='verCampeon.php?nombre=".$resultado['nombre']."'>".$resultado['nombre']."</a></td>
+                    <td><a class='hipervinculoCampeon' href='buscar.php?busquedaGet=".$resultado['rol']."'>".$resultado['rol']." </a></td>
+                    <td><a href='buscar.php?busquedaGet=".$resultado['tipo']."'><img class='iconosIndex' src='../Images/iconosDeRoles/".$resultado['tipo'].".webp' alt='foto-de".$resultado['tipo']."'</a></td>
+                    <td> <a class='hipervinculoCampeon' href='verCampeon.php?nombre=".$resultado['nombre']."'>".$resultado['numero']."</td>
+                </tr>";
+         }
+         ?>
+        </tbody>
     </table>
 </main>
 
