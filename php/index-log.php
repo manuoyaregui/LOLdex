@@ -46,8 +46,7 @@
                 <td class="text-center"><?php echo $campeon["tipo"]; ?></td>
                 <td class="text-center"><?php echo $campeon["numero"]; ?></td>
                 <td class="d-flex justify-content-evenly">
-                    <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
-
+                    <a href="editar-champ.php?id=<?php echo $campeon["id"]; ?>" type="button" class="btn btn-secondary">Modificar</a>
                     <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
                 </td>
             </tr>
