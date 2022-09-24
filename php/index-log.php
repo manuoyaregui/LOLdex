@@ -3,18 +3,27 @@
 <?php
 
     $database = new Database();
-
     $campeones = $database->query("SELECT * FROM Campeon");
 
 ?>
 
 <script>
     function alertaEliminarCampeon(){
-        alert("¿Eliminar campeón?");
+        confirm("Eliminar este campeon?");
     }
 </script>
 
 <main class="container">
+
+    <?php if (isset($_GET["msg"])) : ?>
+
+        <div class="alert alert-dismissible alert-warning mt-3 text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <?php echo $_GET["msg"]; ?>
+        </div>
+
+    <?php endif; ?>
+
     <h1 class="text-center text-primary mt-3">LOLDEX</h1>
 
     <form class="d-flex">
@@ -46,8 +55,8 @@
                 <td class="text-center"><?php echo $campeon["tipo"]; ?></td>
                 <td class="text-center"><?php echo $campeon["numero"]; ?></td>
                 <td class="d-flex justify-content-evenly">
-                    <a href="editar-champ.php?id=<?php echo $campeon["id"]; ?>" type="button" class="btn btn-secondary">Modificar</a>
-                    <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
+                    <a href="editar-champ.php?id=<?php echo $campeon["id"]; ?>" class="btn btn-secondary">Modificar</a>
+                    <a href="borrar-champ.php?id=<?php echo $campeon["id"]; ?>" onclick="alertaEliminarCampeon()" class="btn btn-warning">Eliminar</a>
                 </td>
             </tr>
         <?php endforeach; ?>
