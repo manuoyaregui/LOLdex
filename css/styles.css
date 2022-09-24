@@ -11,3 +11,12 @@
 h1{
     font-size: 3.4em;
 }
+
+.iconosIndex {
+    height: 30px;
+    width: 30px;
+}
+
+.hipervinculoCampeon{
+    text-decoration: none;
+}

@@ -13,18 +13,16 @@
 }
 
 .imagen-busqueda {
-    width: 300px;
-    height: 500px;
-    object-fit: cover;
-
+    width: 200px;
+    height: 200px;
 }
 
-.nombre-campeon{
-    position: relative;
-    margin-top: -90px;
-    margin-left: 20px;
+.nombre-campeon > a{
+    text-decoration: none;
 }
 
-.nombre-campeon > h1{
+
+.nombre-campeon > a > h2{
     color: FFF;
+    text-align: center;
 }
