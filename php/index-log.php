@@ -1,8 +1,16 @@
 <?php include_once "header-log.php" ?>
 
+<?php
+
+    $database = new Database();
+
+    $campeones = $database->query("SELECT * FROM Campeon");
+
+?>
+
 <script>
     function alertaEliminarCampeon(){
-    alert("¿Eliminar campeón?");
+        alert("¿Eliminar campeón?");
     }
 </script>
 
@@ -28,42 +36,22 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td class="text-center"><img src="../images/AhriSquare.webp" alt="foto-ahri"></td>
-            <td class="text-center">Ahri</td>
-            <td class="text-center">Mid</td>
-            <td class="text-center">Mago</td>
-            <td class="text-center">001</td>
-            <td class="d-flex justify-content-evenly">
-                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
+        <?php foreach ($campeones as $campeon) : ?>
+            <tr>
+                <td class="text-center">
+                    <img src="../images/<?php echo strtolower($campeon["nombre"]); ?>Square.webp">
+                </td>
+                <td class="text-center"><?php echo $campeon["nombre"]; ?></td>
+                <td class="text-center"><?php echo $campeon["rol"]; ?></td>
+                <td class="text-center"><?php echo $campeon["tipo"]; ?></td>
+                <td class="text-center"><?php echo $campeon["numero"]; ?></td>
+                <td class="d-flex justify-content-evenly">
+                    <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
 
-                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center"><img src="../images/CaitlynSquare.webp" alt="foto-caitlyn"></td>
-            <td class="text-center">Caitlyn</td>
-            <td class="text-center">Adc</td>
-            <td class="text-center">Tirador</td>
-            <td class="text-center">002</td>
-            <td class="d-flex justify-content-evenly">
-                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
-
-                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center"><img src="../images/OlafSquare.webp" alt="foto-caitlyn"></td>
-            <td class="text-center">Olaf</td>
-            <td class="text-center">Top</td>
-            <td class="text-center">Luchador</td>
-            <td class="text-center">003</td>
-            <td class="d-flex justify-content-evenly">
-                <a href="agregar-champ.php" type="button" class="btn btn-secondary">Modificar</a>
-
-                <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
-            </td>
-        </tr>
+                    <a onclick="alertaEliminarCampeon()" type="button" class="btn btn-warning">Eliminar</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
     </table>
 
 </main>
