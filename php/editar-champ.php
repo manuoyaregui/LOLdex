@@ -17,8 +17,26 @@
 
     if (isset($_POST["editarCampeon"])) {
 
+        /* Se edita el campeon (update en la base de datos) */
+        if (isset($_POST["rol"]) && isset($_POST["clase"])) {
 
-        /*  */
+            $numero = $_POST["numero"];
+            $nombre = $_POST["nombre"];
+            $rol = $_POST["rol"];
+            $clase = $_POST["clase"];
+            $historia = $_POST["historia"];
+
+            $stmt = $conn->prepare("UPDATE Campeon
+                                    SET numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
+                            WHERE id = " . $idCampeon);
+            $stmt->bind_param("issss", $numero, $nombre, $clase, $historia, $rol);
+            $resultado = $stmt->execute();
+
+            if (isset($resultado)) {
+                $mensaje = "Se edito al campeon con ID <strong>" . $idCampeon . "</strong> con exito";
+            }
+
+        }
 
     }
 
@@ -89,7 +107,7 @@
         </div>
 
 
-        <input type="submit" name="editarCampeon" class="btn btn-success mt-3 align-items-center" value="Guardar">
+        <input type="submit" name="editarCampeon" class="btn btn-success mt-3 align-items-center" value="Editar campeon">
 
     </form>
 </main>
