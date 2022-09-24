@@ -44,6 +44,7 @@
         <div class="alert alert-dismissible alert-success mt-3 text-center">
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <?php echo $mensaje; ?>
+            <a href="index-log.php">Volver a la lista</a>
         </div>
 
     <?php endif; ?>
