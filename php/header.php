@@ -31,12 +31,11 @@ include_once  'includes.php'?>
                 </ul>
 
                 <?php
-
-                if ($_SESSION["logueado"]){
+                if (isset($_SESSION["logueado"])){
                    echo '<form action="destroy-session.php" class="mt-2">
                     <div class="form-group d-flex " >
                         <h4 class="mx-3">usuario ADMIN</h4>
-                        <input type="submit" value="log out">
+                        <input class="btn btn-primary" type="submit" value="log out">
                     </div>
                 </form>';
                 }else{

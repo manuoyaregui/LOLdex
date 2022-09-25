@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85934741-fea9-4fa9-b570-804d03dcd4b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/php/destroy-session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/validar-login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campeon.sql" beforeDir="false" afterPath="$PROJECT_DIR$/campeon.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +63,7 @@
       <workItem from="1663687073089" duration="6295000" />
       <workItem from="1663720812728" duration="3667000" />
       <workItem from="1663864956753" duration="1000" />
-      <workItem from="1664143877228" duration="4084000" />
+      <workItem from="1664143877228" duration="4664000" />
     </task>
     <servers />
   </component>
@@ -85,15 +80,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/php/validar-login.php</url>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
