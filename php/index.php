@@ -1,5 +1,12 @@
 <?php include_once "header.php" ?>
 
+<?php
+
+    $database = new Database();
+    $consulta = "select * from campeon where 1";
+    $resultadosBusqueda =$database->query($consulta);
+
+?>
 
 <main class="container">
     <h1 class="text-center text-primary mt-3 a">LOLDEX</h1>
@@ -21,21 +28,37 @@
         </thead>
 
         <tbody>
+        <?php foreach ($resultadosBusqueda as $resultado) : ?>
 
-        <?php
-        $database = new Database();
-        $consulta = "select * from campeon where 1";
-        $resultadosBusqueda =$database->query($consulta);
-        foreach ($resultadosBusqueda as  $resultado){
-            echo"<tr>
-                    <td> <a href='verCampeon.php?nombre=".$resultado['nombre']."'><img class='iconosIndex' src='../Images/ilustracionesSquare/Champion_icon_".$resultado['nombre'].".png' alt='foto-de".$resultado['nombre']."'></a></td>
-                    <td> <a class='hipervinculoCampeon' href='verCampeon.php?nombre=".$resultado['nombre']."'>".$resultado['nombre']."</a></td>
-                    <td><a class='hipervinculoCampeon' href='buscar.php?busquedaGet=".$resultado['rol']."'>".$resultado['rol']." </a></td>
-                    <td><a href='buscar.php?busquedaGet=".$resultado['tipo']."'><img class='iconosIndex' src='../Images/iconosDeRoles/".$resultado['tipo'].".webp' alt='foto-de".$resultado['tipo']."'</a></td>
-                    <td> <a class='hipervinculoCampeon' href='verCampeon.php?nombre=".$resultado['nombre']."'>".$resultado['numero']."</td>
-                </tr>";
-         }
-         ?>
+            <tr>
+                <td>
+                    <a href="verCampeon.php?nombre=<?php echo $resultado["nombre"]; ?>">
+                        <img class="iconosIndex" src="../Images/<?php echo $resultado["imagen"] ?>" alt="foto-de-<?php echo $resultado["nombre"] ?>">
+                    </a>
+                </td>
+                <td>
+                    <a class="hipervinculoCampeon" href="verCampeon.php?nombre=<?php echo $resultado["nombre"]; ?>">
+                        <?php echo $resultado["nombre"]; ?>
+                    </a>
+                </td>
+                <td>
+                    <a class="hipervinculoCampeon" href="buscar.php?busquedaGet=<?php echo $resultado["rol"]; ?>">
+                        <?php echo $resultado["rol"]; ?>
+                    </a>
+                </td>
+                <td>
+                    <a href="buscar.php?busquedaGet=<?php echo $resultado["tipo"]; ?>">
+                        <img class="iconosIndex" src="../Images/iconosDeRoles/<?php echo $resultado["tipo"]; ?>.webp" alt="icono-de-<?php echo $resultado["tipo"] ?>">
+                    </a>
+                </td>
+                <td>
+                    <a class="hipervinculoCampeon" href="verCampeon.php?nombre=<?php echo $resultado["nombre"]; ?>">
+                        <?php echo $resultado["numero"]; ?>
+                    </a>
+                </td>
+            </tr>
+
+        <?php endforeach; ?>
         </tbody>
     </table>
 </main>
