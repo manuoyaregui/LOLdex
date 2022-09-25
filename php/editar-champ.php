@@ -20,6 +20,8 @@
         /* Se edita el campeon (update en la base de datos) */
         if (isset($_POST["rol"]) && isset($_POST["clase"])) {
 
+            /* Usamos la funcion str_replace para reemplazar espacios por - (guines) */
+            $imagen = str_replace(" ", "-", $_FILES["imagen"]["name"]);
             $numero = $_POST["numero"];
             $nombre = $_POST["nombre"];
             $rol = $_POST["rol"];
@@ -27,12 +29,16 @@
             $historia = $_POST["historia"];
 
             $stmt = $conn->prepare("UPDATE Campeon
-                                    SET numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
+                                    SET imagen = ?, numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
                             WHERE id = " . $idCampeon);
-            $stmt->bind_param("issss", $numero, $nombre, $clase, $historia, $rol);
+            $stmt->bind_param("sissss", $imagen, $numero, $nombre, $clase, $historia, $rol);
             $resultado = $stmt->execute();
 
             if (isset($resultado)) {
+                /* Guardamos la imagen del campeon en la carpeta Images */
+                move_uploaded_file($_FILES["imagen"]["tmp_name"], "../Images/" . $imagen);
+                /* Eliminamos la imagen anterior */
+                unlink("../Images/" . $campeon["imagen"]);
                 $mensaje = "Se edito al campeon con ID <strong>" . $idCampeon . "</strong> con exito";
             }
 
@@ -58,9 +64,9 @@
 
     <form action="" method="POST" enctype="multipart/form-data">
 
-<!--        <div class="form-group">-->
-<!--            <input class="form-control my-2" type="file" id="formFile" >-->
-<!--        </div>-->
+        <div class="form-group">
+            <input class="form-control my-2" type="file" name="imagen" id="formFile" value="<?php echo $campeon["imagen"]; ?>">
+        </div>
 
         <div class="form-group">
             <fieldset>

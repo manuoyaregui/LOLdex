@@ -27,7 +27,7 @@
                 $resultado = $stmt->execute();
 
                 if ($resultado) {
-                    /* Guardamos la imagen del campeon seleccionada previamente en la carpeta images */
+                    /* Guardamos la imagen del campeon en la carpeta Images */
                     move_uploaded_file($_FILES["imagen"]["tmp_name"], "../Images/" . $imagen);
                     $mensaje = "Se agrego al campeon <strong>" . $nombre . "</strong> con exito";
                 }
@@ -63,13 +63,13 @@
 
         <div class="form-group">
             <fieldset>
-                <input class="form-control" name="numero" id="numeroCamepon" type="text" placeholder="Número" >
+                <input class="form-control" name="numero" id="numeroCamepon" type="text" placeholder="Número">
             </fieldset>
         </div>
 
         <div class="form-group my-2">
             <fieldset>
-                <input class="form-control" name="nombre" id="nombreCampeon" type="text" placeholder="Nombre" >
+                <input class="form-control" name="nombre" id="nombreCampeon" type="text" placeholder="Nombre">
             </fieldset>
         </div>
 
