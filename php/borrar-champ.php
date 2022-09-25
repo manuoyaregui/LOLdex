@@ -8,12 +8,17 @@
     if (isset($_GET["id"])) {
         $idCampeon = $_GET["id"];
 
-//        $database->execute("DELETE FROM Campeon WHERE id = " . $idCampeon);
+        /* Recuperamos el nombre de la imagen para despues eliminarla de la carpeta */
+        $campeon = $conn->query("SELECT imagen FROM Campeon WHERE id = " . $idCampeon);
+        $imagenABorrar = $campeon->fetch_assoc()["imagen"];
+
         $stmt = $conn->prepare("DELETE FROM Campeon WHERE id = ?");
         $stmt->bind_param("i", $idCampeon);
         $resultado = $stmt->execute();
 
         if (isset($resultado)) {
+            /* Eliminamos la imagen anterior */
+            unlink("../Images/" . $imagenABorrar);
             $mensaje = "Se elimino al campeon con id " . $idCampeon;
         }
 
