@@ -18,7 +18,7 @@
             $database = new Database();
             $conn = $database->conectar();
 
-            if (!empty($numero) && !empty($nombre) && !empty($historia)) {
+            if (!empty($imagen) && !empty($numero) && !empty($nombre) && !empty($historia)) {
 
                 $stmt = $conn->prepare("INSERT INTO Campeon (imagen, numero, nombre, tipo, descripcion, rol)
                                                 VALUES (?, ?, ?, ?, ?, ?)");
