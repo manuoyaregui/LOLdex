@@ -48,7 +48,7 @@
         <?php foreach ($campeones as $campeon) : ?>
             <tr>
                 <td class="text-center">
-                    <img src="../images/<?php echo strtolower($campeon["nombre"]); ?>Square.webp">
+                    <img width="30px" src="../Images/<?php echo $campeon["imagen"]; ?>">
                 </td>
                 <td class="text-center"><?php echo $campeon["nombre"]; ?></td>
                 <td class="text-center"><?php echo $campeon["rol"]; ?></td>
