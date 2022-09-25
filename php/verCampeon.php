@@ -23,7 +23,7 @@
 <main class="container">
     <a href="buscar.php" class="btnVerOtrosCampeones mt-3 btn btn-primary opacity-75 position-absolute">Ver otros campeones</a>
     <div class="row d-flex justify-content-center mt-3 col-lg-12">
-        <img class="champImg col-lg-7" src="../Images/IlustracionCompleta/<?php echo $campeonObj['nombre'] ?>.jpg">
+        <img class="champImg col-lg-7" src="../Images/<?php echo $campeonObj["imagen"]; ?>">
         <div class="container col-lg-5">
             <div class="d-flex  align-items-center">
                 <img src="../Images/iconosDeRoles/<?php echo $campeonObj['tipo'] ?>.webp"
