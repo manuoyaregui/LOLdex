@@ -1,4 +1,6 @@
-<?php include_once  'includes.php'?>
+<?php
+session_start();
+include_once  'includes.php'?>
 
 <!doctype html>
 <html lang="en">
@@ -28,17 +30,31 @@
                     </li>
                 </ul>
 
-                <form action="" class="mt-2">
+                <?php
+
+                if ($_SESSION["logueado"]){
+                   echo '<form action="destroy-session.php" class="mt-2">
+                    <div class="form-group d-flex " >
+                        <h4 class="mx-3">usuario ADMIN</h4>
+                        <input type="submit" value="log out">
+                    </div>
+                </form>';
+                }else{
+                    echo '
+                <form action="validar-login.php" class="mt-2" method="POST">
                     <div class="form-group d-flex " >
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
+                            <input name="usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
                         </div>
                         <div class="form-group mx-2">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                         </div>
-                        <a href="index-log.php" class="btn btn-primary " >Log in</a>
+                        <input name="login" type="submit" class="btn btn-primary " value="Log in" >
                     </div>
-                </form>
+                </form>';
+                }
+
+                ?>
             </div>
         </div>
     </nav>
