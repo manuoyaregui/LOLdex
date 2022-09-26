@@ -1,4 +1,4 @@
-<?php include_once "header-log.php" ?>
+<?php include_once "header.php" ?>
 
 <?php
 
@@ -22,25 +22,38 @@
 
             /* Usamos la funcion str_replace para reemplazar espacios por - (guines) */
             $imagen = str_replace(" ", "-", $_FILES["imagen"]["name"]);
+            $imagenCompleta = str_replace(" ", "-", $_FILES["imagen_completa"]["name"]);
             $numero = $_POST["numero"];
             $nombre = $_POST["nombre"];
             $rol = $_POST["rol"];
             $clase = $_POST["clase"];
             $historia = $_POST["historia"];
 
-            $stmt = $conn->prepare("UPDATE Campeon
-                                    SET imagen = ?, numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
+            if (!empty($numero) && !empty($nombre) && !empty($historia)) {
+                $stmt = $conn->prepare("UPDATE Campeon
+                                    SET numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
                             WHERE id = " . $idCampeon);
-            $stmt->bind_param("sissss", $imagen, $numero, $nombre, $clase, $historia, $rol);
-            $resultado = $stmt->execute();
+                $stmt->bind_param("issss", $numero, $nombre, $clase, $historia, $rol);
+                $resultado = $stmt->execute();
 
-            if (isset($resultado)) {
-                /* Guardamos la imagen del campeon en la carpeta Images */
-                move_uploaded_file($_FILES["imagen"]["tmp_name"], "../Images/" . $imagen);
-                /* Eliminamos la imagen anterior */
-                unlink("../Images/" . $campeon["imagen"]);
-                $mensaje = "Se edito al campeon con ID <strong>" . $idCampeon . "</strong> con exito";
+                if (!empty($imagen) || !empty($imagenCompleta)) {
+                    $stmt = $conn->prepare("UPDATE Campeon
+                                    SET imagen = ?, imagen_completa = ?, numero = ?, nombre = ?, tipo = ?, descripcion = ?, rol = ?
+                            WHERE id = " . $idCampeon);
+                    $stmt->bind_param("ssissss", $imagen, $imagenCompleta, $numero, $nombre, $clase, $historia, $rol);
+                    $resultado = $stmt->execute();
+                }
+
+                if (isset($resultado)) {
+                    /* Guardamos la imagen del campeon en la carpeta Images */
+                    move_uploaded_file($_FILES["imagen"]["tmp_name"], "../Images/" . $imagen);
+                    move_uploaded_file($_FILES["imagen_completa"]["tmp_name"], "../Images/IlustracionCompleta/" . $imagenCompleta);
+
+                    $mensaje = "Se edito al campeon con ID <strong>" . $idCampeon . "</strong> con exito";
+                }
             }
+
+
 
         }
 
@@ -54,6 +67,7 @@
 
         <div class="alert alert-dismissible alert-success mt-3 text-center">
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+<!--            --><?php //var_dump($_POST["editarCampeon"] . $_POST["imagen"]); ?>
             <?php echo $mensaje; ?>
             <a href="index-log.php">Volver a la lista</a>
         </div>
@@ -64,8 +78,14 @@
 
     <form action="" method="POST" enctype="multipart/form-data">
 
-        <div class="form-group">
+        <div class="form-group d-flex align-items-center gap-3">
+            <label for="imagen">Icono</label>
             <input class="form-control my-2" type="file" name="imagen" id="formFile" value="<?php echo $campeon["imagen"]; ?>">
+        </div>
+
+        <div class="form-group d-flex align-items-center gap-3">
+            <label for="imagenCompleta">Imagen</label>
+            <input class="form-control my-2" type="file" name="imagen_completa" id="imagenCompleta" >
         </div>
 
         <div class="form-group">

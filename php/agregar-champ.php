@@ -1,4 +1,4 @@
-<?php include_once "header-log.php" ?>
+<?php include_once "header.php" ?>
 
 <?php
 
@@ -8,6 +8,7 @@
 
             /* Usamos la funcion str_replace para reemplazar espacios por - (guines) */
             $imagen = str_replace(" ", "-", $_FILES["imagen"]["name"]);
+            $imagenCompleta = str_replace(" ", "-", $_FILES["imagen_completa"]["name"]);
             $numero = $_POST["numero"];
             $nombre = $_POST["nombre"];
             $rol = $_POST["rol"];
@@ -20,15 +21,17 @@
 
             if (!empty($imagen) && !empty($numero) && !empty($nombre) && !empty($historia)) {
 
-                $stmt = $conn->prepare("INSERT INTO Campeon (imagen, numero, nombre, tipo, descripcion, rol)
-                                                VALUES (?, ?, ?, ?, ?, ?)");
+                $stmt = $conn->prepare("INSERT INTO Campeon (imagen, imagen_completa, numero, nombre, tipo, descripcion, rol)
+                                                VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-                $stmt->bind_param("sissss", $imagen, $numero, $nombre, $clase, $historia, $rol);
+                $stmt->bind_param("ssissss", $imagen, $imagenCompleta, $numero, $nombre, $clase, $historia, $rol);
                 $resultado = $stmt->execute();
 
                 if ($resultado) {
                     /* Guardamos la imagen del campeon en la carpeta Images */
                     move_uploaded_file($_FILES["imagen"]["tmp_name"], "../Images/" . $imagen);
+                    /* Imagen completa */
+                    move_uploaded_file($_FILES["imagen_completa"]["tmp_name"], "../Images/IlustracionCompleta/" . $imagenCompleta);
                     $mensaje = "Se agrego al campeon <strong>" . $nombre . "</strong> con exito";
                 }
 
@@ -57,8 +60,14 @@
 
     <form action="" method="POST" enctype="multipart/form-data">
 
-        <div class="form-group">
-            <input class="form-control my-2" type="file" name="imagen" id="formFile" >
+        <div class="form-group d-flex align-items-center gap-3">
+            <label for="imagen">Icono</label>
+            <input class="form-control my-2" type="file" name="imagen" id="imagen" >
+        </div>
+
+        <div class="form-group d-flex align-items-center gap-3">
+            <label for="imagenCompleta">Imagen</label>
+            <input class="form-control my-2" type="file" name="imagen_completa" id="imagenCompleta" >
         </div>
 
         <div class="form-group">
