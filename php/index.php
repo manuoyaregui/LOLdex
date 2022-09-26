@@ -5,6 +5,7 @@
     $database = new Database();
     $consulta = "select * from campeon where 1";
     $resultadosBusqueda =$database->query($consulta);
+    //a
 
 ?>
 
