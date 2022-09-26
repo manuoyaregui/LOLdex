@@ -2,8 +2,12 @@
 
 
 <main class="container">
+    <?php
+    if(isset($_GET['errorLogin']) ){
+        echo "<p class='spanErrorLogin position-absolute text-warning'>ERROR - usuario y/o contraseña incorrectos.</p>";
+    }
+    ?>
     <h1 class="text-center text-primary mt-3 a">LOLDEX</h1>
-
     <form action="buscar.php" class="d-flex" method="POST">
         <input class="form-control me-sm-2" type="text" name="busqueda" placeholder="Buscá tu campeón...">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
@@ -33,6 +37,9 @@
                     <td><a class='hipervinculoCampeon' href='buscar.php?busquedaGet=".$resultado['rol']."'>".$resultado['rol']." </a></td>
                     <td><a href='buscar.php?busquedaGet=".$resultado['tipo']."'><img class='iconosIndex' src='../Images/iconosDeRoles/".$resultado['tipo'].".webp' alt='foto-de".$resultado['tipo']."'</a></td>
                     <td> <a class='hipervinculoCampeon' href='verCampeon.php?nombre=".$resultado['nombre']."'>".$resultado['numero']."</td>
+                    if(){
+                        
+                    }?>
                 </tr>";
          }
          ?>

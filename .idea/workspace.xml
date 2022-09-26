@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="85934741-fea9-4fa9-b570-804d03dcd4b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Ahri.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Caitlyn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ilustracionesSquare/Champion_icon_Olaf.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/IlustracionCompleta/AhriSquare.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/IlustracionCompleta/Champion_icon_Ahri.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Vayne.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campeon.sql" beforeDir="false" afterPath="$PROJECT_DIR$/campeon.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/buscar.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/buscar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/header-log.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/xampp/htdocs/PograWeb2",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"

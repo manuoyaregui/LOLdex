@@ -30,6 +30,13 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `campeon`
 --
 
+CREATE TABLE `loldexbd`.`usuario` (
+    `id` INT NOT NULL AUTO_INCREMENT ,
+    `usuario` VARCHAR NOT NULL ,
+    `password` VARCHAR NOT NULL , PRIMARY KEY (`id`)
+                                  ) ENGINE = InnoDB;
+
+
 CREATE TABLE `campeon` (
   `id` int(11) NOT NULL,
   `numero` int(11) NOT NULL,
@@ -40,6 +47,7 @@ CREATE TABLE `campeon` (
   `rol` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `usuario` (`id`, `usuario`, `password`) VALUES ('1', 'admin', 'admin');
 --
 -- Volcado de datos para la tabla `campeon`
 --
