@@ -4,7 +4,6 @@
 
     $database = new Database();
     $consulta = "select * from campeon where 1";
-<<<<<<< HEAD
     $resultadosBusqueda = $database->query($consulta);
 
     echo '<script>
@@ -15,10 +14,6 @@
                 }
             }
         </script>';
-=======
-    $resultadosBusqueda =$database->query($consulta);
-    //a
->>>>>>> 1d330f96b6de99e7fe38c9e398d3feb03355ebc3
 
 ?>
 
