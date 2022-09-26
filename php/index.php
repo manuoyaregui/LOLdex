@@ -4,7 +4,19 @@
 
     $database = new Database();
     $consulta = "select * from campeon where 1";
-    $resultadosBusqueda =$database->query($consulta);
+    $resultadosBusqueda = $database->query($consulta);
+
+//    echo "<pre>";
+//    print_r($resultadosBusqueda);
+//    echo "</pre>";
+    echo '<script>
+            function alertaEliminarCampeon(id) {
+                let confirmacion = confirm("Eliminar campeon?");
+                if (confirmacion) {
+                    window.location.href = "borrar-champ.php?id=" + id
+                }
+            }
+        </script>';
 
 ?>
 
@@ -72,7 +84,8 @@
 
                     <td class="d-flex justify-content-evenly">
                         <a href="editar-champ.php?id=<?php echo $resultado["id"]; ?>" class="btn btn-secondary">Modificar</a>
-                        <a href="borrar-champ.php?id=<?php echo $resultado["id"]; ?>" onclick="alertaEliminarCampeon()" class="btn btn-warning">Eliminar</a>
+                        <?php  ?>
+                        <button id="btn-borrar" onclick="alertaEliminarCampeon(<?php echo $resultado["id"]; ?>)" class="btn btn-warning">Eliminar</button>
                     </td>
 
                 <?php endif; ?>
