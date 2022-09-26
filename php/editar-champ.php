@@ -69,7 +69,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 <!--            --><?php //var_dump($_POST["editarCampeon"] . $_POST["imagen"]); ?>
             <?php echo $mensaje; ?>
-            <a href="index-log.php">Volver a la lista</a>
+            <a href="index.php">Volver a la lista</a>
         </div>
 
     <?php endif; ?>

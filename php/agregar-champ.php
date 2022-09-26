@@ -51,7 +51,7 @@
         <div class="alert alert-dismissible alert-success mt-3 text-center">
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <?php echo $mensaje; ?>
-            <a href="index-log.php">Volver a la lista</a>
+            <a href="index.php">Volver a la lista</a>
         </div>
 
     <?php endif; ?>
@@ -62,28 +62,28 @@
 
         <div class="form-group d-flex align-items-center gap-3">
             <label for="imagen">Icono</label>
-            <input class="form-control my-2" type="file" name="imagen" id="imagen" >
+            <input class="form-control my-2" type="file" name="imagen" id="imagen" required>
         </div>
 
         <div class="form-group d-flex align-items-center gap-3">
             <label for="imagenCompleta">Imagen</label>
-            <input class="form-control my-2" type="file" name="imagen_completa" id="imagenCompleta" >
+            <input class="form-control my-2" type="file" name="imagen_completa" id="imagenCompleta" required>
         </div>
 
         <div class="form-group">
             <fieldset>
-                <input class="form-control" name="numero" id="numeroCamepon" type="text" placeholder="Número">
+                <input class="form-control" name="numero" id="numeroCamepon" type="text" placeholder="Número" required>
             </fieldset>
         </div>
 
         <div class="form-group my-2">
             <fieldset>
-                <input class="form-control" name="nombre" id="nombreCampeon" type="text" placeholder="Nombre">
+                <input class="form-control" name="nombre" id="nombreCampeon" type="text" placeholder="Nombre" required>
             </fieldset>
         </div>
 
         <div class="form-group my-2">
-            <select class="form-select" name="rol" id="exampleSelect1">
+            <select class="form-select" name="rol" id="exampleSelect1" required>
                 <option disabled selected>Seleccionar Rol</option>
                 <option value="Top">Top</option>
                 <option value="Jungla">Jungla</option>

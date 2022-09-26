@@ -6,9 +6,6 @@
     $consulta = "select * from campeon where 1";
     $resultadosBusqueda = $database->query($consulta);
 
-//    echo "<pre>";
-//    print_r($resultadosBusqueda);
-//    echo "</pre>";
     echo '<script>
             function alertaEliminarCampeon(id) {
                 let confirmacion = confirm("Eliminar campeon?");
