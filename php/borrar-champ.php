@@ -22,6 +22,6 @@
             $mensaje = "Se elimino al campeon con id " . $idCampeon;
         }
 
-        header("Location: index-log.php?msg=" . $mensaje);
+        header("Location: index.php?msg=" . $mensaje);
 
     }

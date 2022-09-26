@@ -16,6 +16,11 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
     </form>
 
+    <?php if (isset($_SESSION["logueado"])) : ?>
+
+        <a href="agregar-champ.php" class="btn btn-success mb-3 float-end">Añadir Campeón</a>
+
+    <?php endif; ?>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -24,6 +29,13 @@
             <th scope="col">Rol</th>
             <th scope="col">Clase</th>
             <th scope="col">Número</th>
+
+            <?php if (isset($_SESSION["logueado"])) : ?>
+
+                <th scope="col" class="text-center">Acciones</th>
+
+            <?php endif; ?>
+
         </tr>
         </thead>
 
@@ -56,6 +68,14 @@
                         <?php echo $resultado["numero"]; ?>
                     </a>
                 </td>
+                <?php if (isset($_SESSION["logueado"])) : ?>
+
+                    <td class="d-flex justify-content-evenly">
+                        <a href="editar-champ.php?id=<?php echo $resultado["id"]; ?>" class="btn btn-secondary">Modificar</a>
+                        <a href="borrar-champ.php?id=<?php echo $resultado["id"]; ?>" onclick="alertaEliminarCampeon()" class="btn btn-warning">Eliminar</a>
+                    </td>
+
+                <?php endif; ?>
             </tr>
 
         <?php endforeach; ?>

@@ -9,7 +9,8 @@
 
 <script>
     function alertaEliminarCampeon(){
-        confirm("Eliminar este campeon?");
+        var confirm = confirm("Eliminar este campeon?");
+        console.log(confirm);
     }
 </script>
 
